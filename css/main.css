@@ -408,12 +408,8 @@ html {
         visibility: visible;
     }
 
-    .navigation-list {
+    #navigation-list {
         visibility: hidden;
-    }
-
-    .navigation-item {
-        padding: 16px 0;
     }
 
     .navigation-item::after {

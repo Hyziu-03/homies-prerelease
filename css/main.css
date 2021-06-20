@@ -112,6 +112,7 @@ html {
     height: 4px;
     background-color: #FEFEFE;
     border-radius: 15px;
+    transition: .5s all ease;
 }
 
 .line:nth-child(1) {
@@ -138,10 +139,6 @@ html {
 .line.active:nth-child(3) {
     top: calc(50% - 2px);
     transform: rotate(-45deg);
-}
-
-.navigation-list-down {
-    transform: translateX(0);
 }
 
 /* ? Strony: */
@@ -331,7 +328,7 @@ html {
     color: #3B5672;
     display: flex;
     width: 90vw;
-    margin: 0 auto 80px auto;
+    margin: 0 auto;
     padding: 8px 0;
 }
 
@@ -362,7 +359,7 @@ html {
     display: flex;
     flex-direction: column;
     width: 90vw;
-    margin: 0 auto 80px auto;
+    margin: 0 auto;
     padding: 8px 0;
 }
 
@@ -384,7 +381,6 @@ html {
 /* ? Responsywność: */
 
 @media(max-width: 1275px) {
-
     #landing-page,
     #second-page,
     #blog {
@@ -410,10 +406,19 @@ html {
 
     #navigation-list {
         visibility: hidden;
+        display: none;
     }
 
     .navigation-item::after {
         content: "";
+    }
+
+    .navigation-item:hover {
+        text-shadow: 0 0 0 transparent;
+    }
+
+    .navigation-item:active {
+        background: #193450;
     }
 }
 

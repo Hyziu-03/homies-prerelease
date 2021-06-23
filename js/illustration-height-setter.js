@@ -3,5 +3,9 @@ var illustration = document.getElementById('illustration-one');
 var secondIllustration = document.getElementById('illustration-two');
 var ratio = 0.25;
 
-illustration.style.height = targettedHeight * ratio + 'px';
-secondIllustration.style.height = targettedHeight * ratio + 'px';
+try {
+    illustration.style.height = targettedHeight * ratio + 'px';
+    secondIllustration.style.height = targettedHeight * ratio + 'px';
+} catch(exception) {
+    console.error(exception);
+}
